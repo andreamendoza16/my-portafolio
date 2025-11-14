@@ -1,26 +1,128 @@
 @import "tailwindcss";
-
-:root {
-  --background: #000000;
-  --foreground: #9eccf1;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #a8c7f3;
-    --foreground: #000000;
-  }
+* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Times, serif, sans-serif;
+  background: radial-gradient(circle at top right, #002b5b 0%, #013a7a 25%, #e7f1ff 70%);
+  color: #111;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid rgba(0,0,0,0.06);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #d4d4d4;
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.social-icons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 8px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+.social-icons img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: none;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.18);
+  opacity: 1;
 }
