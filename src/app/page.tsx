@@ -3,9 +3,7 @@
 export default function Home() {
   return (
     <main className="container">
-
       <div className="social-icons">
-
         <a 
           href="https://www.linkedin.com/in/andrea-mendoza-024295368/" 
           target="_blank" 
@@ -41,11 +39,28 @@ export default function Home() {
         <p className="description">
           Estudiante con conocimientos en Excel, inglés y JavaScript. 
           Me gusta aprender, proponer ideas y desarrollar proyectos con un enfoque creativo y organizado. 
-          En este portafolio encontrarás trabajos que muestran mi forma de resolver tareas, experimentar con nuevas herramientas 
-          y seguir mejorando en cada paso.
+          En este portafolio se encuentran trabajos que muestran mi forma de resolver tareas, experimentar con nuevas herramientas 
+          ,seguir mejorando en cada paso y ganando experiencia.
         </p>
 
         <a href="/projects" className="btn-primary">Ver proyectos</a>
+      </section>
+
+      {/* Sección de Habilidades */}
+      <section className="skills">
+        <h2 className="section-title">Mis Habilidades</h2>
+        <div className="skills-list">
+          <div className="skill-item">Comunicación Efectiva</div>
+          <div className="skill-item">Canva</div>
+          <div className="skill-item">Figma</div>
+          <div className="skill-item">Creatividad</div>
+          <div className="skill-item">Programación</div>
+          <div className="skill-item">Inglés </div>
+          <div className="skill-item">Trabajo en Equipo</div>
+          <div className="skill-item">Resolución de Problemas</div>
+          <div className="skill-item">Uso de herramientas de Office</div>
+          <div className="skill-item">Adaptabilidad</div>
+        </div>
       </section>
 
     </main>
