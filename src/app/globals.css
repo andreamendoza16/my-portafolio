@@ -1,5 +1,5 @@
 @import "tailwindcss";
-* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -73,19 +73,24 @@ body {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: 1fr !important;
+  max-width: 700px; /* más ancho para los proyectos */
+  margin: 0 auto;
 }
 
 .project-card {
   background: #ffffff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 12px;
   text-decoration: none;
   color: #111;
   border: 1px solid #d4d4d4;
   transition: 0.2s;
+  display: flex;
+  gap: 25px;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  align-items: center;
 }
 
 .project-card:hover {
@@ -94,9 +99,15 @@ body {
 }
 
 .project-img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-info {
+  flex: 1;
 }
 
 .social-icons {
@@ -126,6 +137,7 @@ body {
   transform: scale(1.18);
   opacity: 1;
 }
+
 .skills {
   margin-top: 40px;
 }
@@ -153,9 +165,14 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
-  font-size: 2rem;
+.project-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 6px;
+}
+
+.project-date {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 10px;
 }
